@@ -3,16 +3,27 @@ Prominence relationship analysis via parameter sweep for the SPE Analysis within
 
 # Overview of Files
 AnalyzePDE: This holds the SPEData class for making and fitting the SPE Amplitude plots.
+
 MeasurmentInfo: This holds the MeasurementInfo class that is not used for anything. It is vestigial from past ways.
+
 nexo_new.mplstyle: The matplotlib style configuration for standardized plot styles
+
 ProcessWaveforms_hacked: The same as ProcessWaveforms_MultiGaussian, but fits an exponential with to the baseline of the fingerplots instead of a line.
+
 ProcessWaveforms_MultiGaussian: Holds the WaveformProcessor class that creates and manages the fingerplot of a specific run with a linear fit for the baseline.
+
 Prom2Dsweep: this is the main prominence sweep code. More on this later.
+
 prominence_sweep_emails: a text file that the sendemail function in sweep_definitions
+
 RunAnalysis: the standard run analysis code for doing an SPE analysis. almost nothing is automated or hidden within functions.
+
 RunAnalysis_parasite: effectively the same as RunAnalysis, but it instead uses the same do_analysis function from sweep_definitions that Prom2Dsweep does
+
 RunInfo: Holds the RunInfo class that processes the hdf5 file for a specific run. It extracts the peak heights with the given prominence value.
+
 RunInfo_hacked: the same as RunInfo, except it grabs peak prominences instead of peak heights.
+
 sweep_definitions: holds functions used for Prom2Dsweep and RunAnalysis_parasite for ease of changing parameters.
 
 # Prom2Dsweep.py
