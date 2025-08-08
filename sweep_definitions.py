@@ -21,13 +21,13 @@ def sendemail(subject,contents,filename):
         msg.set_content(fp.read()) #sets the contents of msg to be the contents of filename
 
     msg['Subject'] = subject #subject of the email
-    msg['From'] = "njenkins@umass.edu" #from me
-    msg['To'] = "njenkins@umass.edu" #to me
+    msg['From'] = "e@mail.ext" #from me
+    msg['To'] = "e@mail.ext" #to me
 
     gmail = smtplib.SMTP('smtp.gmail.com',587) #standard for gmail
     gmail.ehlo() #no idea
     gmail.starttls() #no idea
-    gmail.login("njenkins@umass.edu","wcoscoywvmfvobvy") #first entry is username, second is password. The second entry is an app password (2-Factor authentication prevents using standard password)
+    gmail.login("e@mail.ext","APP PASSWORD") #first entry is username, second is password. The second entry is an app password (2-Factor authentication prevents using standard password)
     gmail.send_message(msg) #send the email
 
 
